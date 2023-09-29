@@ -8,6 +8,8 @@ import {
   FaMobileAlt,
 } from "react-icons/fa";
 
+import { SiMaildotru } from "react-icons/si";
+
 const social_links = [
   {
     id: 1,
@@ -38,6 +40,11 @@ const social_links = [
     id: 6,
     icon: <FaMobileAlt className="social-icon"></FaMobileAlt>,
     url: "tel:+33762429711",
+  },
+  {
+    id: 7,
+    icon: <SiMaildotru className="social-icon"></SiMaildotru>,
+    url: "mailto:daniel.ouattara@gmx.com",
   },
 ];
 
