@@ -8,9 +8,9 @@ export default function Hero() {
     <header className="hero">
       <section className="section-center hero-center">
         <article className="hero-info">
-          <div>
-            <div className="underline"></div>
+          <div className="hero-card">
             <h1>I am Daniel</h1>
+            <div className="underline"></div>
             <h4> Fullstack Javascript Developer: web & mobile</h4>
             <Link to="/contact" className="btn">
               Contact me
