@@ -172,6 +172,11 @@ p {
   margin-top: 3rem;
 }
 
+.logo {
+  width: 50%;
+  margin-top: 3rem;
+}
+
 /* section */
 .section {
   padding: 5rem 0;
@@ -191,12 +196,10 @@ p {
 
 /* added during recording */
 .underline {
-  width: 5rem;
+  width: 10rem;
   height: 0.25rem;
-  margin-bottom: 1.25rem;
+  margin: 1rem auto;
   background: var(--clr-primary-5);
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .section-title {
@@ -488,6 +491,25 @@ Hero
   margin-left: 0;
 }
 
+.hero-card {
+  border: 1px solid var(--clr-primary-6);
+  border-left-width: 2rem;
+  border-top-color: #fff;
+  border-right-color: #fff;
+  padding: 1rem;
+  width: fit-content;
+  border-top-right-radius: 10px;
+  /* border-top-left-radius: 10px; */
+  /* border-bottom-right-radius: 10px; */
+  border-bottom-left-radius: 7%;
+  background-color: #fff;
+}
+
+
+.hero-card h1 {
+  font-size: 2.5rem;
+}
+
 .hero-info {
   background: var(--clr-primary-10);
 }
@@ -506,6 +528,7 @@ Hero
 
 .hero-info h4 {
   color: var(--clr-grey-5);
+  font-size: 18px !important;
 }
 
 .hero-icons {
