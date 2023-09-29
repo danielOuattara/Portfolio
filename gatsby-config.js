@@ -1,3 +1,16 @@
+// /**
+//  * Configure your Gatsby site with this file.
+//  *
+//  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
+//  */
+
+// /**
+//  * @type {import('gatsby').GatsbyConfig}
+//  */
+// module.exports = {
+//   plugins: [],
+// }
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -22,6 +35,8 @@ module.exports = {
     image: "/mainImg.png",
     linkedInUsername: "daniel-b-ouattara-677146ab",
     twitterUsername: "@danielOuattara",
+    about_me:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi commodiaperiam officiis nostrum maxime reprehenderit, totam eaque corporisrepudiandae soluta quos neque omnis dolore quibusdam aliquam,consectetur excepturi error suscipit.",
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -34,13 +49,13 @@ module.exports = {
         path: `${__dirname}/src/assets/images`, // Path to the directory
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `examples`, // The unique name for each instance
-        path: `${__dirname}/src/components/examples`, // Path to the directory
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `examples`, // The unique name for each instance
+    //     path: `${__dirname}/src/components/examples`, // Path to the directory
+    //   },
+    // },
 
     {
       resolve: `gatsby-source-contentful`,
