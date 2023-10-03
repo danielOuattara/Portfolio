@@ -1,26 +1,24 @@
 import React from "react";
 import { graphql } from "gatsby";
+import image from "./../assets/images/hero2.svg";
 import { Title, Seo } from "../components";
+
 //------------------------------------------------------
 export default function About(props) {
   const aboutData = props.data.site.siteMetadata.aboutMe;
+  console.log(aboutData);
 
   return (
     <Seo>
       <section className="about-page">
         <div className="section-center about-center">
-          <h1>About page</h1>
-          <img
-            src="/src/assets/images/hero.svg"
-            alt={"about"}
-            className="about-img"
-          />
+          <img src={image} placeholder="blurred" layout="fixed" alt="about" />
           <article className="about-text">
             <Title title={"about"} />
             <p>{aboutData.text}</p>
             <div className="about-stack">
               {aboutData.stack.map((item) => (
-                <span key={item.id}>{item.title}</span>
+                <span key={item}>{item}</span>
               ))}
             </div>
           </article>
