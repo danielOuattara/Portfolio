@@ -28,7 +28,7 @@ export default function Project(props) {
 
         <div className="project-stack">
           {props.technologies.map((techno) => (
-            <span key={techno.id}>{techno}</span>
+            <span key={techno}>{techno}</span>
           ))}
         </div>
 
