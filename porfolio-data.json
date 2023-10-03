@@ -1,0 +1,27 @@
+{
+  "name": "Daniel Ouattara",
+  "contact": {
+    "email": "daniel.ouattara@gmx.com",
+    "linkedIn": "linkedIn contact",
+    "mobile": "07",
+    "city": "Combs la ville",
+    "region": "Ile-de-France",
+    "country": "France"
+  },
+  "diploma": [{ "title": "", "date": "" }],
+  "certifications": [{ "title": "", "id": "", "web_url": "", "date": "" }],
+  "projects": [
+    {
+      "title": "",
+      "grade": "frontend backend fullstack",
+      "category": "web OR mobile",
+      "level": "beginner OR intermediate OR advanced",
+      "description": "bla b",
+      "featured": true,
+      "url_website": "",
+      "url_github": "",
+      "featured_image": "",
+      "technologies": ["react", "react-router", "axios", "strapi", "auth0"]
+    }
+  ]
+}
