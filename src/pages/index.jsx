@@ -1,12 +1,12 @@
 import React from "react";
-import { Hero, Services /* Jobs */, Projects } from "../components";
+import { Hero, Services /* Jobs */, Projects, Seo } from "../components";
 import { graphql } from "gatsby";
 
 export default function Home(props) {
   const featuredProjects = props.data.allContentfulPortfolioProjects.nodes;
 
   return (
-    <>
+    <Seo>
       <main>
         <Hero />
         <Services />
@@ -17,9 +17,11 @@ export default function Home(props) {
           projects={featuredProjects}
         />
       </main>
-    </>
+    </Seo>
   );
 }
+
+export const Head = () => <Seo title={"Home"} />;
 
 export const query = graphql`
   query {

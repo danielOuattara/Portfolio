@@ -6,7 +6,7 @@ import { Seo } from "./../components";
 
 export default function Error() {
   return (
-    <Seo>
+    <Seo title={"Not Found 404"}>
       <main className="error-page">
         <div className="error-container">
           <h1>404</h1>

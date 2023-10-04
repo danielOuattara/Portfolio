@@ -6,10 +6,9 @@ import { Title, Seo } from "../components";
 //------------------------------------------------------
 export default function About(props) {
   const aboutData = props.data.site.siteMetadata.aboutMe;
-  console.log(aboutData);
 
   return (
-    <Seo>
+    <Seo title={"About"}>
       <section className="about-page">
         <div className="section-center about-center">
           <img src={image} placeholder="blurred" layout="fixed" alt="about" />

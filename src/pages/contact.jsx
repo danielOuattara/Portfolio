@@ -5,7 +5,7 @@ import { Seo } from "../components";
 
 export default function Contact() {
   return (
-    <Seo>
+    <Seo title="Contact">
       <section className="contact-page">
         <article className="contact-form">
           <h3>stay in touch ?</h3>

@@ -5,25 +5,38 @@ import { Seo } from "./../../components";
 //-------------------------------------------------------------------------------
 
 export default function SingleProjectTemplate(props) {
-  //   console.log(props);
+  // console.log(props);
   const projectData = props.data.contentfulPortfolioProjects;
-  console.log(projectData.featured_image.publicUrl);
+  console.log("projectData = ", projectData);
   return (
-    <main className="project-template-page">
-      <h2>{props.pageContext.title}</h2>
-      <p>{projectData.description.description}</p>
-      <a href={projectData.url} target="_blank" rel="noreferrer">
-        <img
-          src={projectData.featured_image.publicUrl}
-          alt={projectData.title}
-        />
-      </a>
-      <Link to="/projects" className="btn">
-        back to projects
-      </Link>
-    </main>
+    <Seo>
+      <main className="project-template-page">
+        <h2>{props.pageContext.title}</h2>
+        <p>{projectData.description.description}</p>
+        <a href={projectData.url} target="_blank" rel="noreferrer">
+          <img
+            src={projectData.featured_image.publicUrl}
+            alt={projectData.title}
+          />
+        </a>
+        <Link to="/projects" className="btn">
+          back to projects
+        </Link>
+      </main>
+    </Seo>
   );
 }
+
+export const Head = (props) => {
+  const projectData = props.data.contentfulPortfolioProjects;
+  return (
+    <Seo
+      title={projectData.title}
+      description={projectData.description.description}
+      image={projectData.featured_image.publicUrl}
+    />
+  );
+};
 
 //-------------------------------------------------------------------------------
 export const query = graphql`

@@ -5,15 +5,17 @@ import { Projects, Seo } from "../components";
 export default function ProjectsPage(props) {
   const projects = props.data.allContentfulPortfolioProjects.nodes;
   return (
-    //   <Seo>
-    <main>
-      <section className="projects-page">
-        <Projects title="all projects" projects={projects} />
-      </section>
-    </main>
-    //   </Seo>
+    <Seo>
+      <main>
+        <section className="projects-page">
+          <Projects title="all projects" projects={projects} />
+        </section>
+      </main>
+    </Seo>
   );
 }
+
+export const Head = () => <Seo title={"Projects"} />;
 
 export const query = graphql`
   query {
