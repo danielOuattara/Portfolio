@@ -8,7 +8,6 @@ export default function Seo({ title, description, image, children }) {
   const data = useStaticQuery(query);
 
   const { pathname } = useLocation();
-  console.log("pathname = ", pathname);
 
   const {
     defaultTitle,
@@ -39,12 +38,12 @@ export default function Seo({ title, description, image, children }) {
       <meta name="author" content={seo.name} />
 
       {/* Google / Search Engine Tags */}
-      <meta itemprop="name" content="Fullstack Portfolio" />
-      <meta itemprop="published" content={seo.date} />
-      <meta itemprop="publishDate" content={seo.date} />
-      <meta itemprop="date" content={seo.date} />
-      <meta itemprop="description" content={seo.description} />
-      <meta itemprop="image" content={seo.image} />
+      <meta itemProp="name" content="Fullstack Portfolio" />
+      <meta itemProp="published" content={seo.date} />
+      <meta itemProp="publishDate" content={seo.date} />
+      <meta itemProp="date" content={seo.date} />
+      <meta itemProp="description" content={seo.description} />
+      <meta itemProp="image" content={seo.image} />
 
       {/* ok with linkedIn + facebook */}
       <meta property="og:description" content={seo.description} />
