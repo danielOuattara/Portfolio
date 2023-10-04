@@ -1,11 +1,12 @@
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa";
+import { HiAtSymbol } from "react-icons/hi";
+import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { Link } from "gatsby";
 import { titleToSlug } from "./../utilities/titleToSlug";
 
 export default function Project(props) {
-  console.log(props);
   return (
     <article className="project">
       <GatsbyImage
@@ -15,16 +16,21 @@ export default function Project(props) {
       />
 
       <div className="project-info">
-        <span className="project-number">#{props.index + 1}</span>
-
         <Link
           to={`/projects/${titleToSlug(props.title)}`}
           className="project-slug"
         >
-          <h3>{props.title}</h3>
+          <h3>
+            {" "}
+            <span className="project-number">#{props.index + 1}</span>&nbsp;
+            {props.title} &nbsp;
+            <BsBoxArrowInUpRight className="goto project-number" />
+          </h3>
         </Link>
 
-        <p className="project-desc">{props.description.description}</p>
+        <p className="project-desc">
+          {props.description.description.slice(0, 85) + "..."}
+        </p>
 
         <div className="project-stack">
           {props.technologies.map((techno) => (
@@ -38,7 +44,7 @@ export default function Project(props) {
           </a>
 
           <a href={props.url_website} target="_blank" rel="noreferrer">
-            <FaShareSquare className="project-icon" />
+            <HiAtSymbol className="project-icon" />
           </a>
         </div>
       </div>

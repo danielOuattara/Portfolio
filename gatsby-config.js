@@ -16,12 +16,14 @@ module.exports = {
   siteMetadata: {
     title: "Fullstack Portfolio",
     description:
-      "Portfolio website where I present myself and show my skills on different kind of projects and using a wide range of effective web design technologies. From the contact page, everybody can contact me",
+      "Portfolio Gatsby & Contentful powered website where I present myself and show my skills on different kind of projects and using a wide range of effective web design technologies.",
     titleTemplate: `%s | Fullstack Portfolio `,
     siteUrl: "https://daniel-gatsby-portfolio.netlify.app",
     image: "/homeImage.png",
     linkedInUsername: "daniel-b-ouattara-677146ab",
     twitterUsername: "@danielOuattara",
+    name: "Daniel Ouattara",
+    date: "Sept. 2023",
     aboutMe: {
       text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi commodiaperiam officiis nostrum maxime reprehenderit, totam eaque corporisrepudiandae soluta quos neque omnis dolore quibusdam aliquam,consectetur excepturi error suscipit.",
       stack: [

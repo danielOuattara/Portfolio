@@ -185,7 +185,9 @@ p {
 .section-center {
   width: 90vw;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1290px;
+
+
 }
 
 @media screen and (min-width: 992px) {
@@ -767,19 +769,31 @@ Jobs
 Projects
 ===============
 */
+
+.projects-center {
+  /* border: 1px solid red; */
+  display: grid;
+  gap: 2rem;
+}
+
 .projects {
   background: var(--clr-grey-10);
+  /* background: lightgray; */
+  /* border: 1px solid black */
 }
 
 .project {
-  display: grid;
-  margin-bottom: 4rem;
+  border: 1px solid lightgray;
+  border-radius: var(--radius);
+  /* display: grid; */
+  /* margin-bottom: 4rem; */
+  /* height: 30rem; */
 }
 
 .project-img {
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
-  height: 19rem;
+  height: 17rem;
   z-index: 1;
 }
 
@@ -801,23 +815,22 @@ Projects
 
 .project-info {
   background: var(--clr-white);
-  padding: 1rem 2rem;
+  /* border: 1px solid green; */
+  padding: 1rem;
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
 }
 
 .project-number {
   display: inline-block;
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
   color: var(--clr-primary-5);
-  margin-bottom: 0.75rem;
 }
 
 .project-slug h3 {
-  font-weight: 500;
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
+  /* font-weight: 500; */
+  /* font-size: 1.25rem; */
+  text-transform: capitalize;
   color: var(--clr-grey-1);
   transition: var(--transition);
 }
@@ -827,12 +840,12 @@ Projects
 }
 
 .project-desc {
-  word-spacing: 15px;
+  word-spacing: 5px;
   color: var(--clr-grey-3);
 }
 
 .project-stack {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-stack span,
@@ -852,10 +865,15 @@ Projects
   margin-top: 0.5rem;
 }
 
+.project-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .project-icon {
   color: var(--clr-primary-5);
-  font-size: 1.25rem;
-  margin-right: 0.5rem;
+  font-size: 1.75rem;
+  margin-right: 1.25rem;
   transition: var(--transition);
 }
 
@@ -865,28 +883,38 @@ Projects
 
 @media screen and (min-width: 576px) {
   .project-img {
-    height: 19rem;
+    /* height: 15rem; */
   }
 }
 
 @media screen and (min-width: 768px) {
+  .projects-center {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .project-img {
-    height: 22rem;
+    /* height: 22rem; */
   }
 }
 
 @media screen and (min-width: 992px) {
+
+  .projects-center {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .project {
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
+
   }
 
   .project-img {
     grid-column: 1 / span 8;
     /* grid-column-end: 8; */
     grid-row: 1 / 1;
-    height: 30rem;
-    border-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    border-top-left-radius: var(--radius);
     box-shadow: var(--dark-shadow);
   }
 
@@ -987,10 +1015,11 @@ Project Template Page
   padding: 5rem;
   gap: 3rem;
   text-align: center;
+  border: 5px solid yellow;
 }
 
 .project-template-page h2 {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .project-template-page p {

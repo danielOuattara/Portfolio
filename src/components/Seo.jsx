@@ -17,6 +17,8 @@ export default function Seo({ title, description, image, children }) {
     siteUrl,
     linkedInUsername,
     twitterUsername,
+    name,
+    date,
   } = data.site.siteMetadata;
 
   const seo = {
@@ -26,15 +28,21 @@ export default function Seo({ title, description, image, children }) {
     url: `${siteUrl}${pathname || ``}`,
     linkedInUsername,
     twitterUsername,
+    name,
+    date,
   };
 
   return (
     <>
       <html lang="en-US" />
       <title> {`${seo.title} | Fullstack Portfolio`}</title>
+      <meta name="author" content={seo.name} />
 
       {/* Google / Search Engine Tags */}
       <meta itemprop="name" content="Fullstack Portfolio" />
+      <meta itemprop="published" content={seo.date} />
+      <meta itemprop="publishDate" content={seo.date} />
+      <meta itemprop="date" content={seo.date} />
       <meta itemprop="description" content={seo.description} />
       <meta itemprop="image" content={seo.image} />
 
@@ -75,6 +83,8 @@ export const query = graphql`
         siteUrl
         linkedInUsername
         twitterUsername
+        name
+        date
       }
     }
   }
