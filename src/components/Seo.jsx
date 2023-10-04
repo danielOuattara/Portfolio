@@ -28,12 +28,15 @@ export default function Seo({ title, description, image, children }) {
     twitterUsername,
   };
 
-  // console.log("seo =  ", seo);
-
   return (
     <>
       <html lang="en-US" />
       <title> {`${seo.title} | Fullstack Portfolio`}</title>
+
+      {/* Google / Search Engine Tags */}
+      <meta itemprop="name" content="Fullstack Portfolio" />
+      <meta itemprop="description" content={seo.description} />
+      <meta itemprop="image" content={seo.image} />
 
       {/* ok with linkedIn + facebook */}
       <meta property="og:description" content={seo.description} />
