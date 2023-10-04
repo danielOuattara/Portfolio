@@ -23,7 +23,7 @@ export default function Navbar(props) {
         <div className="nav-links">
           {page_links.map((link) => (
             <Link key={link.id} to={link.url}>
-              {link.text}
+              {link.page}
             </Link>
           ))}
         </div>
