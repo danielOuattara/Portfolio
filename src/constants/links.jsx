@@ -14,8 +14,8 @@ const page_links = [
     url: "/projects",
     page: "projects",
     subLinks: [
-      { id: "3-1", url: "/projects/frontend", page: "frontend" },
-      { id: "3-2", url: "/projects/backend", page: "backend" },
+      { id: "3-1", url: "/projects/backend", page: "backend" },
+      { id: "3-2", url: "/projects/frontend", page: "frontend" },
       { id: "3-3", url: "/projects/fullstack", page: "fullstack" },
       { id: "3-4", url: "/projects/mobile", page: "mobile" },
     ],
@@ -25,9 +25,9 @@ const page_links = [
     url: "/documents",
     page: "documents",
     subLinks: [
-      { id: "4-1", url: "/documents/cv", page: "curriculum" },
-      { id: "4-2", url: "/documents/diploma", page: "diploma" },
-      { id: "4-3", url: "/documents/certificates", page: "certificates" },
+      { id: "4-1", url: "/documents/certificates", page: "certificates" },
+      { id: "4-2", url: "/documents/cv", page: "curriculum" },
+      { id: "4-3", url: "/documents/diploma", page: "diploma" },
     ],
   },
   {
