@@ -11,14 +11,38 @@ export default function Sidebar(props) {
       </button>
       <div className="side-container">
         <ul className={props.isSidebarOpen ? "sidebar-links" : ""}>
-          {page_links.map((link) => (
-            <li key={link.id}>
-              <Link to={link.url} onClick={props.toggleSidebar}>
-                {link.text}
-              </Link>
-            </li>
-          ))}
+          {page_links.map((link) => {
+            if (link.subLinks) {
+              return (
+                <li key={link.id}>
+                  <Link to={link.url} onClick={props.toggleSidebar}>
+                    {link.page}
+                  </Link>
+                  <ul className="sidebar-subLinks">
+                    {link.subLinks.map((subLink) => {
+                      return (
+                        <li key={subLink.id}>
+                          <Link to={subLink.url} onClick={props.toggleSidebar}>
+                            {subLink.page}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+              );
+            } else {
+              return (
+                <li key={link.id}>
+                  <Link to={link.url} onClick={props.toggleSidebar}>
+                    {link.page}
+                  </Link>
+                </li>
+              );
+            }
+          })}
         </ul>
+
         <ul className={props.isSidebarOpen ? "social-links sidebar-icons" : ""}>
           {social_links.map((link) => (
             <li key={link.id}>
