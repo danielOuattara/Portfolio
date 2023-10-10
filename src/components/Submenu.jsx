@@ -27,7 +27,12 @@ export default function Submenu(props) {
       <div className={` nav-subLinks submenu-center ${columns} `}>
         {props.subMenuPageToShown.subLinks.map((subLink, index) => {
           return (
-            <Link key={index} to={subLink.url} className="link-btn">
+            <Link
+              key={index}
+              to={subLink.url}
+              className="link-btn"
+              onClick={() => props.setIsSubMenuOpen(false)}
+            >
               {subLink.page}
             </Link>
           );
