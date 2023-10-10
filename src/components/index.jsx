@@ -8,6 +8,7 @@ import Projects from "./Projects";
 import Seo from "./Seo";
 import Services from "./Services";
 import Sidebar from "./Sidebar";
+import Submenu from "./Submenu";
 import Title from "./Title";
 
 export {
@@ -21,5 +22,6 @@ export {
   Seo,
   Services,
   Sidebar,
+  Submenu,
   Title,
 };
