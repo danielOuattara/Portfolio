@@ -59,6 +59,7 @@ export default function Navbar(props) {
                 to={link.url}
                 className={link.subLinks ? "link-btn has-subLinks" : "link-btn"}
                 onMouseOver={(event) => link.subLinks && displaySubMenu(event)}
+                onClick={() => props.setIsSubMenuOpen(false)}
               >
                 {link.page}
               </Link>
