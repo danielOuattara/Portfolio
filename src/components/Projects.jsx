@@ -15,7 +15,7 @@ export default function Projects(props) {
 
       {props.showLinkToProjects && (
         <Link to="/projects" className="btn center-btn">
-          projects
+          go to projects
         </Link>
       )}
     </section>

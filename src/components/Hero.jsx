@@ -11,9 +11,9 @@ export default function Hero() {
           <div className="hero-card">
             <h1>I am Daniel</h1>
             <div className="underline"></div>
-            <h4> Fullstack Javascript Developer: web & mobile</h4>
+            <h4> Fullstack Developer: Web & Mobile</h4>
             <Link to="/contact" className="btn">
-              Contact me
+              Contact
             </Link>
             <div className="social-links">
               {social_links.map((link) => (

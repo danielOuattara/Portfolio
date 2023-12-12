@@ -4,9 +4,6 @@ import "../assets/css/main.css";
 
 export default function Layout(props) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  /* ------------------------------------- */
-
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [subMenuLocation, setSubMenuLocation] = useState({
     subMenuCenterPosition: 0,
@@ -18,17 +15,12 @@ export default function Layout(props) {
     subLinks: [],
     url: "",
   });
-  // console.log("subMenuPageToShown = ", subMenuPageToShown);
-
-  /* ------------------------------------- */
-
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
     <>
       <Navbar
         toggleSidebar={toggleSidebar}
-        // setIsSidebarOpen={setIsSidebarOpen}
         setIsSubMenuOpen={setIsSubMenuOpen}
         setSubMenuLocation={setSubMenuLocation}
         setSubMenuPageToShown={setSubMenuPageToShown}
