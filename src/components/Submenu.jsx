@@ -9,8 +9,8 @@ export default function Submenu(props) {
 
   useEffect(() => {
     props.subMenuPageToShown.subLinks.length <= 3
-      ? setColumns("col-3")
-      : setColumns("col-4");
+      ? setColumns("col-2")
+      : setColumns("col-3");
     subMenuContainerRef.current.style.left = `${props.subMenuLocation.subMenuCenterPosition}px`;
     subMenuContainerRef.current.style.top = `${props.subMenuLocation.subMenuTopPosition}px`;
   }, [props.subMenuLocation, props.subMenuPageToShown.subLinks]);
