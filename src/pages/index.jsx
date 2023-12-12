@@ -30,8 +30,7 @@ export const query = graphql`
       nodes {
         id
         title
-        grade
-        category
+        type
         level
         description {
           description
