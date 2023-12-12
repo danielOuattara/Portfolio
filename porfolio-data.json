@@ -13,15 +13,15 @@
   "projects": [
     {
       "title": "",
-      "grade": "frontend backend fullstack",
-      "category": "web OR mobile",
+      "type": "frontend backend fullstack",
       "level": "beginner OR intermediate OR advanced",
       "description": "bla b",
       "featured": true,
       "url_website": "",
       "url_github": "",
-      "featured_image": "",
-      "technologies": ["react", "react-router", "axios", "strapi", "auth0"]
+      "technologies": ["react", "react-router", "axios", "strapi", "auth0"],
+      "image_featured": "",
+      "images_list": ""
     }
   ]
 }
