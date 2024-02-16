@@ -4,10 +4,9 @@ import { FaGithubSquare } from "react-icons/fa";
 import { HiAtSymbol } from "react-icons/hi";
 import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { Link } from "gatsby";
-import { titleToSlug } from "./../utilities/titleToSlug";
+import stringToSlug from "./../utilities/stringToSlug";
 
 export default function Project(props) {
-  console.log("props = ", props);
   return (
     <article className="project">
       <GatsbyImage
@@ -18,7 +17,9 @@ export default function Project(props) {
 
       <div className="project-info">
         <Link
-          to={`/projects/${props.type}/${titleToSlug(props.title)}`}
+          to={`/projects/${stringToSlug(props.category)}/${stringToSlug(
+            props.title,
+          )}`}
           className="project-slug"
         >
           <h3>
