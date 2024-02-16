@@ -39,10 +39,6 @@ export const query = graphql`
           gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
         }
         technologies
-        images_list {
-          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
-          id
-        }
       }
     }
   }
